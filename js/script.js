@@ -124,3 +124,22 @@ function prosesTransaksi() {
 
 // Menjalankan fungsi pertama kali
 updateTampilan();
+
+
+// Fungsi untuk mereset seluruh data kembali ke angka 0
+function resetSemuaData() {
+    // Beri konfirmasi ke pengguna agar tidak sengaja terklik
+    if (confirm("Apakah Anda yakin ingin menghapus semua saldo dan mulai dari awal?")) {
+        // Setel ulang semua variabel objek menjadi 0
+        dana = {
+            utama: 0, dapur: 0, sekolah: 0, tabungan: 0, keinginan: 0, main: 0
+        };
+        
+        // Sembunyikan kembali kotak saran/advise jika sedang terbuka
+        document.getElementById('adviseBox').style.display = "none";
+        
+        // Perbarui angka di layar dan hapus memori lama
+        updateTampilan();
+        alert("Semua saldo berhasil di-reset menjadi Rp 0!");
+    }
+}
