@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Amplop Digital Rumah Tangga Pro</title>
+    <!-- Hubungkan ke file CSS external -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h2>✉️ Dompet Digital & Alokator Gaji Pro</h2>
+
+    <!-- Ringkasan Kantong Utama -->
+    <div class="card kantong-utama">
+        <h3>💵 Sisa Alokasi Gaji (Kantong Utama)</h3>
+        <div class="saldo" id="saldo-utama" style="font-size: 1.8rem;">Rp 0</div>
+        <small>Uang yang belum dimasukkan ke dalam amplop spesifik</small>
+    </div>
+
+    <!-- Form Alokasi Gaji Bulanan -->
+    <div class="card" style="border-left: 5px solid #12b886;">
+        <h3>💰 Input Gaji Bulanan Baru</h3>
+        <label>Nomor WhatsApp Pengingat (Format: 628xxx tanpa + atau spasi):</label>
+        <input type="text" id="nomorWA" placeholder="6281389188903">
+        
+        <div class="grid-3" style="margin-top: 10px;">
+            <div style="grid-column: span 2;">
+                <label>Total Gaji (Rp):</label>
+                <input type="number" id="gajiBulanan" placeholder="Contoh: 5000000">
+            </div>
+            <div>
+                <label>Aksi:</label>
+                <button class="btn-gajian" onclick="prosesGajian()">Hitung Rekomendasi</button>
+            </div>
+        </div>
+
+        <!-- Kotak Rekomendasi/Advise & Tombol Kirim WA -->
+        <div id="adviseBox" class="advise-box">
+            <h4>💡 REKOMENDASI ALOKASI PRIORITAS:</h4>
+            <div id="isiAdvise"></div>
+            <button id="btnKirimWA" class="btn-wa" onclick="kirimWhatsApp()">📱 Kirim Rangkuman ke WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Form Transaksi Harian -->
+    <div class="card">
+        <h3>✍️ Catat Transaksi / Sebar Uang</h3>
+        <div class="grid-3">
+            <div>
+                <label>Pilih Amplop:</label>
+                <select id="pilihAmplop">
+                    <option value="utama">💵 Kantong Utama (Sisa Gaji)</option>
+                    <option value="dapur">🍳 Kebutuhan Dapur & RT (40%)</option>
+                    <option value="sekolah">🎓 Sekolah Anak (20%)</option>
+                    <option value="tabungan">💰 Tabungan (15%)</option>
+                    <option value="keinginan">💄 Penampilan & Gaya (10%)</option>
+                    <option value="main">🎮 Hiburan & Main (15%)</option>
+                </select>
+            </div>
+            <div>
+                <label>Jenis Transaksi:</label>
+                <select id="jenisTransaksi">
+                    <option value="kurang">💸 Jajan / Pakai Uang</option>
+                    <option value="tambah">📥 Isi Saldo Amplop</option>
+                </select>
+            </div>
+            <div>
+                <label>Jumlah Uang (Rp):</label>
+                <input type="number" id="jumlahUang" placeholder="Contoh: 50000">
+            </div>
+        </div>
+        <button onclick="prosesTransaksi()" style="margin-top: 10px;">Eksekusi Transaksi</button>
+    </div>
+
+    <!-- Tampilan Semua Amplop -->
+    <div class="amplop-grid">
+        <div class="amplop" style="background: #fff9db; border-color: #fcc419;">
+            <h3 style="color: #e67700;">🍳 Kebutuhan Dapur & RT</h3>
+            <div class="saldo" id="saldo-dapur">Rp 0</div>
+        </div>
+        <div class="amplop" style="background: #f8f0fc; border-color: #cc5de8;">
+            <h3 style="color: #862e9c;">🎓 Sekolah Anak</h3>
+            <div class="saldo" id="saldo-sekolah">Rp 0</div>
+        </div>
+        <div class="amplop" style="background: #fff4e6; border-color: #ff922b;">
+            <h3 style="color: #d9480f;">💰 Tabungan</h3>
+            <div class="saldo" id="saldo-tabungan">Rp 0</div>
+        </div>
+        <div class="amplop" style="background: #fff0f6; border-color: #f783ac;">
+            <h3 style="color: #c2255c;">💄 Penampilan & Gaya</h3>
+            <div class="saldo" id="saldo-keinginan">Rp 0</div>
+            <small style="color: #868e96;">Lipstik, tas, baju, dompet baru</small>
+        </div>
+        <div class="amplop" style="grid-column: span 2;">
+            <h3>🎮 Hiburan & Main</h3>
+            <div class="saldo" id="saldo-main">Rp 0</div>
+        </div>
+    </div>
+
+    <!-- Hubungkan ke file JavaScript external -->
+    <script src="js/script.js"></script>
+</body>
+</html>
