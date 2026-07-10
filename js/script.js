@@ -60,14 +60,9 @@ function prosesGajian() {
                   `_Yuk konsisten! Selesaikan pengisian amplop virtual Anda sekarang._`;
 
     // Tampilkan elemen kotak saran di halaman web
-    const adviseBox = document.getElementById('adviseBox');
-    const btnKirimWA = document.getElementById('btnKirimWA');
-    
-    if (adviseBox && btnKirimWA) {
-        document.getElementById('isiAdvise').innerHTML = htmlAdvise;
-        adviseBox.style.display = "block";
-        btnKirimWA.style.display = "block";
-    }
+    document.getElementById('isiAdvise').innerHTML = htmlAdvise;
+    document.getElementById('adviseBox').style.display = "block";
+    document.getElementById('btnKirimWA').style.display = "block";
     
     updateTampilan();
 }
@@ -75,12 +70,13 @@ function prosesGajian() {
 // Fungsi membuka aplikasi WhatsApp dengan API resmi yang benar
 function kirimWhatsApp() {
     const noWA = document.getElementById('nomorWA').value.trim();
-    if (noWA === "") {
+    if (noWA === "6281389188903") {
         alert("Harap masukkan nomor WhatsApp tujuan terlebih dahulu!");
         return;
     }
     
-    const urlWA = `https://wa.me{noWA}?text=${encodeURIComponent(teksPesanWA)}`;
+    // Perbaikan jalur URL API WhatsApp menggunakan wa.me agar responsif di HP/PC
+    const urlWA = `https://wa.me{6281389188903}?text=${encodeURIComponent(teksPesanWA)}`;
     window.open(urlWA, '_blank');
 }
 
@@ -96,10 +92,6 @@ function prosesTransaksi() {
     }
 
     if (jenis === 'kurang') {
-        if (dana[amplop] === undefined) {
-            alert("Kategori amplop tidak valid!");
-            return;
-        }
         if (dana[amplop] < jumlah) {
             alert("Saldo di amplop tersebut tidak mencukupi!");
             return;
@@ -113,9 +105,7 @@ function prosesTransaksi() {
             }
             dana.utama -= jumlah;
         }
-        if (dana[amplop] !== undefined) {
-            dana[amplop] += jumlah;
-        }
+        dana[amplop] += jumlah;
     }
 
     document.getElementById('jumlahUang').value = "";
@@ -124,4 +114,3 @@ function prosesTransaksi() {
 
 // Menjalankan fungsi pertama kali
 updateTampilan();
-
