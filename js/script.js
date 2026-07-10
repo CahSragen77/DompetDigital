@@ -76,7 +76,7 @@ function kirimWhatsApp() {
     }
     
     // Perbaikan jalur URL API WhatsApp menggunakan wa.me agar responsif di HP/PC
-    const urlWA = `https://wa.me{6281389188903}?text=${encodeURIComponent(teksPesanWA)}`;
+    const urlWA = `https://wa.me/6281389188903?text=${encodeURIComponent(teksPesanWA)}`;
     window.open(urlWA, '_blank');
 }
 
