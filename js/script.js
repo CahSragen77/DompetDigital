@@ -75,12 +75,12 @@ function prosesGajian() {
 // Fungsi membuka aplikasi WhatsApp dengan API resmi yang benar
 function kirimWhatsApp() {
     const noWA = document.getElementById('nomorWA').value.trim();
-    if (noWA === "6281389188903") {
+    if (noWA === "6281213825210") {
         alert("Harap masukkan nomor WhatsApp tujuan terlebih dahulu!");
         return;
     }
     
-    const urlWA = `https://wa.me/6281389188903?text=${encodeURIComponent(teksPesanWA)}`;
+    const urlWA = `https://wa.me/6281213825210?text=${encodeURIComponent(teksPesanWA)}`;
     window.open(urlWA, '_blank');
 }
 
