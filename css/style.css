@@ -1,0 +1,85 @@
+body { 
+    font-family: Arial, sans-serif; 
+    max-width: 750px; 
+    margin: 20px auto; 
+    padding: 10px; 
+    background-color: #f4f6f9; 
+}
+.card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
+}
+.grid-3 { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px; 
+}
+.amplop-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+}
+.amplop { 
+    background: #e3faf2; 
+    border: 2px solid #20c997; 
+    padding: 15px; 
+    border-radius: 8px; 
+}
+.amplop h3 { 
+    margin: 0 0 10px 0; 
+    color: #0ca678; 
+}
+.saldo { 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+.kantong-utama { 
+    background: #e8f4fd; 
+    border: 2px solid #339af0; 
+    color: #1c7ed6; 
+    text-align: center; 
+}
+input, button, select { 
+    width: 100%; 
+    padding: 8px; 
+    margin: 5px 0; 
+    box-sizing: border-box; 
+    border: 1px solid #ced4da; 
+    border-radius: 4px; 
+}
+button { 
+    background-color: #339af0; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+button:hover { 
+    background-color: #228be6; 
+}
+.btn-gajian { 
+    background-color: #12b886; 
+}
+.btn-gajian:hover { 
+    background-color: #0ca678; 
+}
+.advise-box { 
+    background: #fff9db; 
+    border-left: 5px solid #fcc419; 
+    padding: 15px; 
+    border-radius: 4px; 
+    margin-top: 15px; 
+    display: none; 
+}
+.btn-wa { 
+    background-color: #25d366; 
+    margin-top: 10px; 
+    display: none; 
+}
+.btn-wa:hover { 
+    background-color: #128c7e; 
+}
