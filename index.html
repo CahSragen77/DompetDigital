@@ -19,10 +19,14 @@
     </div>
 
     <!-- Form Alokasi Gaji Bulanan -->
-    <div class="card" style="border-left: 5px solid #12b886;">
-        <h3>💰 Input Gaji Bulanan Baru</h3>
-        <label>Nomor WhatsApp Pengingat (Format: 628xxx tanpa + atau spasi):</label>
-        <input type="text" id="nomorWA" placeholder="6281389xxxxxx">
+<div class="card" style="border-left: 5px solid #12b886;">
+    <h3>💰 Input Gaji Bulanan Baru</h3>
+    <label>Nomor WhatsApp Pengingat (Format: 628xxx tanpa + atau spasi):</label>
+    <input type="text" id="nomorWA" placeholder="Contoh: 628123456789">
+    
+    <!-- TAMBAHKAN TOMBOL RESET INI DI SINI -->
+    <button onclick="resetSemuaData()" style="background-color: #e03131; margin-top: 5px; font-size: 0.8rem; width: auto; padding: 4px 10px;">🔄 Reset Mulai dari Awal</button>
+
         
         <div class="grid-3" style="margin-top: 10px;">
             <div style="grid-column: span 2;">
@@ -72,17 +76,7 @@
         </div>
         <button onclick="prosesTransaksi()" style="margin-top: 10px;">Eksekusi Transaksi</button>
     </div>
-
-    <!-- Form Alokasi Gaji Bulanan -->
-<div class="card" style="border-left: 5px solid #12b886;">
-    <h3>💰 Input Gaji Bulanan Baru</h3>
-    <label>Nomor WhatsApp Pengingat (Format: 628xxx tanpa + atau spasi):</label>
-    <input type="text" id="nomorWA" placeholder="Contoh: 628123456789">
-    
-    <!-- TAMBAHKAN TOMBOL RESET INI DI SINI -->
-    <button onclick="resetSemuaData()" style="background-color: #e03131; margin-top: 5px; font-size: 0.8rem; width: auto; padding: 4px 10px;">🔄 Reset Mulai dari Awal</button>
-
-
+          
     <!-- Tampilan Semua Amplop -->
     <div class="amplop-grid">
         <div class="amplop" style="background: #fff9db; border-color: #fcc419;">
