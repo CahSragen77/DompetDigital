@@ -80,7 +80,7 @@ function kirimWhatsApp() {
         return;
     }
     
-    const urlWA = `https://wa.me{noWA}?text=${encodeURIComponent(teksPesanWA)}`;
+    const urlWA = `https://wa.me/6281389188903?text=${encodeURIComponent(teksPesanWA)}`;
     window.open(urlWA, '_blank');
 }
 
